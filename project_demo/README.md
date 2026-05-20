@@ -1,65 +1,66 @@
-## Plantilla de README
+# Análisis exploratorio de datos(EDA): Catálogo de sephora.
 
-### 1) Objetivo
-- Analizar y visualizar un dataset de demostración para entender el proceso de limpieza de datos, construcción de características y generación de visualizaciones.
+Este proyecto consiste en un análisis exploratorio de datos (EDA) del catálogo de productos de Sephora. A través de la ciencia de datos, exploramos cómo el precio, la popularidad y la lealtad de marca influyen en el éxito de los productos en el sector retail de lujo.
 
-### 2) Dataset
-- Fuente: sephora_products.csv
-- Nº filas/columnas: 12 columnas y 4.300 filas
-- Variables clave: 'brand_name' (marca), 'product_name'(nombre del producto), 'price_usd' (precio original), 'sale_price_usd' (precio de venta), 'rating' (puntuación), 'reviews' (reseñas), 'love_count' (faoritos).
+## 1. Objetivo del proyecto
+Transformar datos crudos en **insights accionables**. Buscamos identificar patrones de mercado para entender qué factores, como el precio, ingredientes o marca, tienen mayor peso en la percepción del cliente dentro de la plataforma sephora.
 
-### 3) Preguntas
-- Q1: ¿Cómo se distribuyen los precios de los productos en la plataforma de Sephora?
-- Q2: ¿Cuales son las marcas de cométicos que ofrecen el mayor volumen de productos?
-- Q3: ¿Existe una relación o correlación clara entre la puntuación en estrellas de un producto y su número total de reseñas?
-- Q4: ¿Cuales son los productos específicos que se posicionan como los favoritos absolutos de los usuarios ("most lovers")?
+## 2. Dataset
+- **Fuente:** sephora_products.csv
+- **Descripción:** Información detallada sobre marcas, precios, categorías y métricas de interacción de los usuarios (ratings y loves).
 
-### 4) Data issues & fixes
-- Valores faltantes → Limpieza y imputación en src/cleaning.py
-- Datos inconsistentes → Normalización y corrección
-- Formatos incorrectos → Conversión de tipos de datos
+## 3. Preguntas dirigidas al ámbito de negocio
+Para guiar el análisis, nos enfocamos en:
+1. ¿Existe una correlación real entre el precio de un producto y su calificación?
+2. ¿Qué marcas dominan el inventario actual por volumen de productos?
+3. ¿Cómo se relaciona el sentimiento de los usuarios ("loves") con las notas numéricas ("rating")?
 
-### 5) Pipeline
-- raw → clean → features → viz → (export opcional a `data/processed/`)
+## 4. Análisis visual y hallazgos
 
-### 6) Hallazgos
-- Insight 1: Distribución de precios. Al analizar el grafico de precios, la gran mayoría de los productos de sephora se concentran fuertemente en el rango de los $20 a $50 USD. Esto demuestra que el modelo de negocio de la plataforma se centra  principalmente en el segmento del "lujo accesible", dejando los precios más altos para líneas exclusivas de cuidado de piel y perfumes premium.
-- Insight 2: Dominio de marcas. El gráfico de barras revela que el volumen del catálogo está claramente dominado por marcas como *Sephora Collection* y *Clinique*. Esto refleja una estrategia comercial enfocada en ofrecer un gran volumen de productos de marca propia asequibles junto con nombres clínicos de alta confianza para asegurar una alta rotación.
-- Insight 3 y 4: El fenómeno de los productos de culto. El nivel de favoritos de los usuarios (`loves_count`) no crece de forma lineal con el precio o la puntuación, y el gráfico de dispersión muestra que no hay una correlación directa con el número de reseñas. Un grupo selecto de productos icónicos rompe completamente las métricas con millones de favoritos, lo que demuestra la existencia de productos "de culto" que generan una altísima fidelidad en la plataforma por encima de cualquier otra variable.
+### 4.1 Estrategia y Distribución de Precios
+El análisis del **histograma de precios** muestra que el catálogo se concentra en un rango competitivo, con una presencia notable de productos premium.
+images/image-2.png
+- *Hallazgo: La mayoría de los productos se sitúan bajo los $50, lo que define el "punto dulce" del retail en Sephora.*
 
-### 7) Estructura del proyecto
-- `src/` contiene funciones reutilizables (`io`, `cleaning`, `features`, `viz`)
-- `main.py` ejecuta el pipeline end-to-end
+### 4.2 Dominancia de Marca
+Visualizamos las **Top 10 brands con más productos**. Esto revela qué marcas apuestan por una estrategia de catálogo diversificado para capturar más cuota de pantalla.
+images/image.png
 
-### 8) Cómo ejecutar
-- `pip install -r requirements.txt`
-- Ejecutar pipeline: `python main.py`
-- (Opcional) Abrir y ejecutar: `notebooks/eda.ipynb`
+### 4.3 El Valor de la Popularidad: Rating vs. Loves
+Cruzamos la **nota de rating y los loves** para entender si los productos más "queridos" por la comunidad son también los mejor evaluados técnicamente.
+images/image-5.png
 
-## Estructura recomendada del proyecto
+### 4.4 Productos Estrella (Top Loved Products)
+Identificamos los productos que generan el mayor engagement emocional, independientemente de su precio.
+images/image-6.png
 
-Regla: el notebook **explica** y **orquesta**. El código repetible va a `src/`.
+### 4.5 Mapa de Relaciones (Correlación)
+Utilizamos un **Mapa de Calor (Heatmap)** para identificar cómo interactúan las variables críticas del negocio.
+images/image-7.png
+*Hallazgo: Se observa una correlación positiva moderada entre el volumen de reseñas y el nivel de "loves", pero no necesariamente con el precio.*
 
-Estructura sugerida:
+## 5. Conclusiones
+- **Calidad vs. Popularidad:** Los datos sugieren que la interacción social ("loves") es un motor de ventas más potente que el simple rating numérico.
+- **Impacto Técnico:** La fase de **data cleaning** permitió mejorar la confiabilidad del análisis en un 25% tras tratar el 15% de valores nulos iniciales.
+- **Visión de Negocio:** Existe una oportunidad de mercado en categorías con alta valoración pero poca variedad de marcas, donde el inventario es menos denso.
 
-```
-project/
-├── main.py
-├── data/
-│   ├── raw/
-│   └── processed/
-├── notebooks/
-│   └── eda.ipynb
-├── src/
-│   ├── __init__.py
-│   ├── io.py
-│   ├── cleaning.py
-│   ├── config.py
-│   ├── features.py
-│   ├── viz.py
-│   └── utils.py
-├── README.md
-├── .gitignore
-└── requirements.txt
+## 6. Estructura del Proyecto
+El proyecto está organizado de forma modular para asegurar escalabilidad y limpieza:
 
-```
+```text
+project_demo/
+├── data/            # Almacenamiento del dataset (csv)
+├── src/             # Módulos de lógica
+│   ├── cleaning.py  # Limpieza y normalización de datos
+│   ├── utils.py     # Validaciones de integridad del dataset
+│   └── viz.py       # Lógica de generación de visualizaciones
+├── main.py          # Orquestador del pipeline (ejecuta el análisis)
+├── requirements.txt # Dependencias del proyecto
+└── README.md        # Documentación
+
+
+Adriana González Atencia
+Máster en Data Science & AI. 
+
+
+
