@@ -19,12 +19,12 @@ Para guiar el análisis, nos enfocamos en:
 
 ### 4.1 Estrategia y distribución de precios
 El análisis del **histograma de precios** muestra que el catálogo se concentra en un rango competitivo, con una presencia notable de productos premium.
-![Análisis de precios](images/image-2.png)
+![Análisis de precios](images/image.png)
 - *Hallazgo: La mayoría de los productos se sitúan bajo los $50, lo que define el "punto dulce" del retail en Sephora.*
 
 ### 4.2 Dominancia de marca
 Visualizamos las **Top 10 brands con más productos**. Esto revela qué marcas apuestan por una estrategia de catálogo diversificado para capturar más cuota de pantalla.
-![Dominancia](images/image.png)
+![Dominancia](images/image-3.png)
 
 ### 4.3 El valor de la popularidad: Rating vs. Loves
 Cruzamos la **nota de rating y los loves** para entender si los productos más "queridos" por la comunidad son también los mejor evaluados técnicamente.
