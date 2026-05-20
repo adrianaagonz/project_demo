@@ -1,3 +1,6 @@
+Máster en Data Science & AI. 
+Adriana González Atencia
+
 # Análisis exploratorio de datos(EDA): Catálogo de sephora.
 
 Este proyecto consiste en un análisis exploratorio de datos (EDA) del catálogo de productos de Sephora. A través de la ciencia de datos, exploramos cómo el precio, la popularidad y la lealtad de marca influyen en el éxito de los productos en el sector retail de lujo.
@@ -67,8 +70,6 @@ project_demo/
 └── README.md        # Documentación
 
 
-## Adriana González Atencia
-## Máster en Data Science & AI. 
 
 
 
