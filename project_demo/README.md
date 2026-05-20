@@ -67,8 +67,8 @@ project_demo/
 └── README.md        # Documentación
 
 
-Adriana González Atencia
-Máster en Data Science & AI. 
+## Adriana González Atencia
+## Máster en Data Science & AI. 
 
 
 
