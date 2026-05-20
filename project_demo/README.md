@@ -17,26 +17,26 @@ Para guiar el análisis, nos enfocamos en:
 
 ## 4. Análisis visual y hallazgos
 
-### 4.1 Estrategia y Distribución de Precios
+### 4.1 Estrategia y distribución de precios
 El análisis del **histograma de precios** muestra que el catálogo se concentra en un rango competitivo, con una presencia notable de productos premium.
-images/image-2.png
+![Análisis de precios](images/image-2.png)
 - *Hallazgo: La mayoría de los productos se sitúan bajo los $50, lo que define el "punto dulce" del retail en Sephora.*
 
-### 4.2 Dominancia de Marca
+### 4.2 Dominancia de marca
 Visualizamos las **Top 10 brands con más productos**. Esto revela qué marcas apuestan por una estrategia de catálogo diversificado para capturar más cuota de pantalla.
-images/image.png
+![Dominancia](images/image.png
 
-### 4.3 El Valor de la Popularidad: Rating vs. Loves
+### 4.3 El valor de la popularidad: Rating vs. Loves
 Cruzamos la **nota de rating y los loves** para entender si los productos más "queridos" por la comunidad son también los mejor evaluados técnicamente.
-images/image-5.png
+![Popularidad](images/image-5.png
 
-### 4.4 Productos Estrella (Top Loved Products)
+### 4.4 Productos estrella (Top loved products)
 Identificamos los productos que generan el mayor engagement emocional, independientemente de su precio.
-images/image-6.png
+![Productos](images/image-6.png
 
-### 4.5 Mapa de Relaciones (Correlación)
+### 4.5 Mapa de relaciones (correlación)
 Utilizamos un **Mapa de Calor (Heatmap)** para identificar cómo interactúan las variables críticas del negocio.
-images/image-7.png
+![Correlación](images/image-7.png
 *Hallazgo: Se observa una correlación positiva moderada entre el volumen de reseñas y el nivel de "loves", pero no necesariamente con el precio.*
 
 ## 5. Conclusiones
@@ -44,7 +44,7 @@ images/image-7.png
 - **Impacto Técnico:** La fase de **data cleaning** permitió mejorar la confiabilidad del análisis en un 25% tras tratar el 15% de valores nulos iniciales.
 - **Visión de Negocio:** Existe una oportunidad de mercado en categorías con alta valoración pero poca variedad de marcas, donde el inventario es menos denso.
 
-## 6. Estructura del Proyecto
+## 6. Estructura del proyecto
 El proyecto está organizado de forma modular para asegurar escalabilidad y limpieza:
 
 ```text
