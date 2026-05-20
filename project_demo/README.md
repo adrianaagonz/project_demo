@@ -24,19 +24,19 @@ El análisis del **histograma de precios** muestra que el catálogo se concentra
 
 ### 4.2 Dominancia de marca
 Visualizamos las **Top 10 brands con más productos**. Esto revela qué marcas apuestan por una estrategia de catálogo diversificado para capturar más cuota de pantalla.
-![Dominancia](images/image.png
+![Dominancia](images/image.png)
 
 ### 4.3 El valor de la popularidad: Rating vs. Loves
 Cruzamos la **nota de rating y los loves** para entender si los productos más "queridos" por la comunidad son también los mejor evaluados técnicamente.
-![Popularidad](images/image-5.png
+![Popularidad](images/image-5.png)
 
 ### 4.4 Productos estrella (Top loved products)
 Identificamos los productos que generan el mayor engagement emocional, independientemente de su precio.
-![Productos](images/image-6.png
+![Productos](images/image-6.png)
 
 ### 4.5 Mapa de relaciones (correlación)
 Utilizamos un **Mapa de Calor (Heatmap)** para identificar cómo interactúan las variables críticas del negocio.
-![Correlación](images/image-7.png
+![Correlación](images/image-7.png)
 *Hallazgo: Se observa una correlación positiva moderada entre el volumen de reseñas y el nivel de "loves", pero no necesariamente con el precio.*
 
 ## 5. Conclusiones
