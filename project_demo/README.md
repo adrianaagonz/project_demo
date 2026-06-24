@@ -52,7 +52,7 @@ Utilizamos un **Mapa de Calor (Heatmap)** para identificar cómo interactúan la
 
 ## 5. Conclusiones
 - **Calidad vs. Popularidad:** Los datos sugieren que la interacción social ("loves") es un motor de ventas más potente que el simple rating numérico.
-- **Impacto Técnico:** La fase de **data cleaning** permitió mejorar la confiabilidad del análisis en un 25% tras tratar el 15% de valores nulos iniciales.
+- **Impacto Técnico:** La fase de **data cleaning** permitió mejorar la confiabilidad del análisis tras tratar el 19% de valores nulos iniciales.
 - **Visión de Negocio:** Existe una oportunidad de mercado en categorías con alta valoración pero poca variedad de marcas, donde el inventario es menos denso.
 
 ## 6. Estructura del proyecto
